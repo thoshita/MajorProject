@@ -1,0 +1,86 @@
+{% extends 'layout.html' %}
+
+{% block title%}
+Faculty Home Page
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/facultyHome.css')}}">
+{% endblock%}
+
+{% block navbar%}
+<div class="collapse navbar-collapse " id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+        <li class="active nav-item">
+            <a class="nav-link" href="#"><i class="far fa-list-alt"></i> Completed</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="facultyOngoing"><i class="fas fa-clone"></i> Ongoing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="far fa-plus-square"></i> Proposed</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class='fas fa-bell' style="font-size: larger;"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class='fas fa-user-circle' style="font-size: larger;"></i></a>
+        </li>
+    </ul>
+</div>  
+{% endblock %}
+{%block body%}
+<div class="container">
+    <div class="table-responsive" style="white-space:pre-wrap; word-wrap:break-word"> 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Row</th>
+                    <th>Year</th>
+                    <th>Project Domain</th>
+                    <th>Project Name</th>
+                    <th>Project Members</th>
+                    <th>Project Guide</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-primary">
+                    <td>1</td>
+                    <td>2020-21</td>
+                    <td>Hardware</td>
+                    <td>Wagon - The Smart Wheelchair</td>
+                    <td>DIKSHA RAJ,
+ANISH KALRA, 
+SREEJITH KRISHNA N, 
+SUHRIDAY ROY </td>
+                    <td>Dr. K.N.Shreenath</td>
+                </tr>
+                <tr class="table-active">
+                    <td>2</td>
+                    <td>2020-21</td>
+                    <td>Web Development</td>
+                    <td>Project Management Web Application using ML</td>
+<td>KASULA THOSHITA
+MANASA G
+NIKHIL SAH
+PAVITHRA BS
+</td>
+                    <td>Mrs. Kavitha</td>
+                </tr>
+                <tr class="table-warning">
+                    <td>3</td>
+                    <td>2020-21</td>
+                    <td>Mobile Applicatio & AR</td>
+                    <td>Carkart: A Car Retail Mobile Application using Augumented Reality</td>
+<td>KASTHURI CM
+MRUNALINI M
+PRANJAL SHARMA
+</td>
+                    <td>Mr. Gururaj S.P</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+</div>
+{%endblock%}

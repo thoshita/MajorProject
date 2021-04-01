@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+
+{% block title%}
+Student Home Page
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/studentWork.css')}}">
+<script src="{{url_for('static',filename='js/studentWork.js')}}"></script>
+{% endblock%}
+
+{% block navbar%}
+<div class="collapse navbar-collapse " id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="studentHome"><i class="far fa-list-alt"></i> Completed</a>
+        </li>
+        <li class="active dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-clone"></i> My Work</a>
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a class="active nav-link" href="#">Project Diary</a></li>
+              <li><a class="nav-link" href="studentPerformance">My Performance</a></li>
+              <li><a class="nav-link" href="#">Work Submission</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="far fa-plus-square"></i> Proposals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class='fas fa-bell' style="font-size: larger;"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class='fas fa-user-circle' style="font-size: larger;"></i></a>
+        </li>
+    </ul>
+</div>  
+{% endblock %}
+{%block body%}
+<div class="container">
+    <button type="button" class="btn btn-info" onclick="openForm();">Add Work</button>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+          <h3 align="center">Project Diary</h3>
+      
+          <label for="done"><b>Work Done</b></label>
+          <input type="text" placeholder="Enter Work Done" name="done" id="workDone" required>
+      
+          <button type="button" class="btn btn-success" onclick="CreateRow();">Add Work</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <div class="table-responsive" style="white-space:pre-wrap; word-wrap:break-word"> 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Submitted Date</th>
+                    <th>Work Done</th>
+                    <th>Feedback From Guide</th>
+                    <th>Verified Date</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr>
+                    <td>27-11-20</td>
+                    <td>Revised Synopsis Submission</td>
+                    <td>Good!Prepare for Phase 1 demonstration scheduled in 2nd week of December.</td>
+                    <td>27-11-20</td>
+                </tr>
+                <tr>
+                    <td>21-11-20</td>
+                    <td>Revised Synopsis Submission</td>
+                    <td>Make the use case diagram more clear and recheck the tools & technologies.</td>
+                    <td>25-11-20</td>
+                </tr>
+                <tr>
+                    <td>18-11-20</td>
+                    <td>Synopsis Submission</td>
+                    <td>Include proper methodology diagrams.</td>
+                    <td>19-11-20</td>
+                </tr>
+                <tr>
+                    <td>8-11-20</td>
+                    <td>Revised Idea Proposal</td>
+                    <td>Good! Submit a detailed Synopsis by 20-11-20</td>
+                    <td>10-11-20</td>
+                </tr>
+                <tr>
+                    <td>3-11-20</td>
+                    <td>Idea Proposal</td>
+                    <td>At the end the product has to be deployed and be used in real time.Consider the parameters to derive Best Project of the year. 
+                    </td>
+                    <td>3-11-20</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+</div>
+{%endblock%}

@@ -1,0 +1,106 @@
+{% extends 'layout.html' %}
+
+{% block title%}
+Faculty Home Page
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/facultyOngoing.css')}}">
+<script src="{{url_for('static',filename='js/facultyOngoing.js')}}"></script>
+{% endblock%}
+
+{% block navbar%}
+<div class="collapse navbar-collapse " id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="facultyHome"><i class="far fa-list-alt"></i> Completed</a>
+        </li>
+        <li class="active nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-clone"></i> Ongoing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="far fa-plus-square"></i> Proposed</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class='fas fa-bell' style="font-size: larger;"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class='fas fa-user-circle' style="font-size: larger;"></i></a>
+        </li>
+    </ul>
+</div>  
+{% endblock %}
+{%block body%}
+<div class="container">
+    <div class="table-responsive" style="white-space:pre-wrap; word-wrap:break-word"> 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Project Domain</th>
+                    <th>Project Members</th>
+                    <th>Project Progress</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active" onclick="showHideRow('hidden_row1');">
+                    <td>Project Management Web Application using ML</td>
+                    <td>Web Development</td>
+<td>KASULA THOSHITA
+MANASA G
+NIKHIL SAH
+PAVITHRA BS
+</td>
+                    <td>20%</td>
+                </tr>
+                <table class="table hidden_row" id="hidden_row1" align="center">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Work Done</th>
+                            <th>Due Date</th>
+                            <th>Submitted Date</th>
+                            <th>Member1</th>
+                            <th>Member2</th>
+                            <th>Member3</th>
+                            <th>Member4</th>
+                            <th>Total Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Phase1
+(30Marks)</td>
+                            <td>Synopsis Submission</td>
+                            <td>30-11-20</td>
+                            <td>27-11-20</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Phase2
+(20Marks)</td>
+                            <td>20% Progress Demo</td>
+                        </tr>
+                        <tr>
+                            <td>Phase3
+(20Marks)</td>
+                            <td>50% Progress Demo</td>
+                        </tr>
+                        <tr>
+                            <td>Phase4
+(30Marks)</td>
+                            <td>100% Progress Demo</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </tbody>
+        </table>
+    </div>    
+</div>
+{%endblock%}

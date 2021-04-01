@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="{{url_for('static',filename='images/logo.jpg')}}">
+        <!-- Author Meta -->
+        <meta name="author" content="virago">
+        <!-- Meta Description -->
+        <meta name="description" content="">
+        <!-- Meta Keyword -->
+        <meta name="keywords" content="">
+        <!-- meta character set -->
+        <meta charset="UTF-8">
+        <!-- Site Title -->
+        <title>{% block title %}{% endblock %}</title>
+        <!--css-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+        <!--scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            nav a{
+                font-weight: bold;
+            }
+
+            .brand-small{
+                display: none;
+            }
+
+            @media screen and (max-width: 600px) {
+                div.brand-big {
+                    display: none;
+                }
+                div.brand-small{
+                    display: block;
+                }
+            }
+            .page-footer{
+                background-color: black;
+                color: white;
+            }
+        </style>
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+			<!-- Brand -->
+			<div class="brand-big">
+				<a class="navbar-brand" href="#" >
+					<img src="{{url_for('static',filename='images/logo.jpg')}}" alt="Logo" style="width:40px;">
+						SIDDAGANGA INSTITUTE OF TECHNOLOGY
+				</a>
+			</div>
+			
+			<div class="brand-small" >
+				<a class="navbar-brand" href="#" >
+					<img src="{{url_for('static',filename='images/logo.jpg')}}" alt="Logo" style="width:40px;">
+				</a>
+			</div>
+			<!-- Collapse -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Links -->
+			{% block navbar %}{% endblock %}
+        </nav>
+        {% block body %}{% endblock %}
+        <footer class="page-footer font-small unique-color-dark pt-4">		
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">© 2020 Copyright:
+			<a href="#"> Department of Computer Science</a>
+			</div>
+		</footer>
+    </body>
+</html>

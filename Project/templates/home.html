@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="{{url_for('static',filename='images/logo.jpg')}}">
+		<!-- Author Meta -->
+		<meta name="author" content="virago">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Project Portal</title>
+		<!--css-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/home.css')}}">
+		<!--scripts-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://cdn.zingchart.com/zingchart.min.js"></script>		
+	</head>
+    <body>
+		<nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+			<!-- Brand -->
+			<div class="brand-big">
+				<a class="navbar-brand" href="#" >
+					<img src="{{url_for('static',filename='images/logo.jpg')}}" alt="Logo" style="width:40px;">
+						SIDDAGANGA INSTITUTE OF TECHNOLOGY
+				</a>
+			</div>
+			
+			<div class="brand-small" >
+				<a class="navbar-brand" href="#" >
+					<img src="{{url_for('static',filename='images/logo.jpg')}}" alt="Logo" style="width:40px;">
+				</a>
+			</div>
+			<!-- Collapse -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Links -->
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+					  <a class="nav-link" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="facultyHome">Login</a>
+					</li>
+				</ul>
+			</div>  
+		</nav> 
+		<div class="poster">
+			<div class="content-big col-5">
+				<h1>WELCOME!</h1>
+				<p>
+					High achievement always takes place in the framework of high expectation...
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				</p>
+			</div>
+			<div class="content-small col-5">
+				<h1>WELCOME!</h1>
+				<p>
+					High achievement always takes place in the framework of high expectation...
+				</p>
+			</div>
+		</div>
+		<br>
+		<div id='myChart' class="container"></div>
+		<section id="about">
+			<div class="container">
+				<div class="about">
+					<h2>About site</h2>
+					<br>
+					<p style="font-size: 1rem;"><span>The Siddaganga Institute of Technology (SIT), Tumakuru, was established in the year 1963 by Sree Siddaganga Education Society (SSES), headed by His Holiness “Dr. Sree Sree Sivakumara Swamiji”, a centenarian. The college is an autonomous institution, affiliated to Visvesvaraya Technological University (VTU), Belgaum, Karnataka, approved by AICTE, New Delhi and programmes accredited by NBA, New Delhi. At present, the institute offers 12 Undergraduate Programmes and 16 Postgraduate programmes. The institute has well qualified, experienced and competent faculty numbering 333 and 100 of them have Ph.D and another 65 are pursuing their Ph.D. Sixteen departments in the institute are recognized as research centers by Visvesvaraya Technological University and offer Ph.D and M.Sc (Engg.) by research. S.I.T. is a beneficiary of Technical Education Quality Improvement Programme (TEQIP), a World Bank assisted Project (Phase-I & II). S.I.T is topped among the 100 Engineering Institutions of the country (70th rank) under National Institutional Ranking Framework (NIRF) of MHRD, Govt. of India.
+						Departments of Mechanical Engineering and Industrial Engineering and Management have well 
+						qualified and committed faculty with well equipped laboratories, workshops and other 
+						infrastructural facilities and are also actively engaged in Industry-Institute interaction. 
+						Major areas of specialization in these departments are Materials Engineering, Manufacturing 
+						Engineering, Machine Design, Thermal Engineering and Management. These departments offer U.G. 
+						programme in Mechanical Engineering and Industrial Engineering & Management. The departments 
+						also offer P.G. programmes in Thermal Engineering, Manufacturing Science & Engineering Also,
+						 M.Sc (Engg) and Ph.D. Programmes are being offered by the research centre of the Departments.
+						  Both the departments have been accredited by NBA, New Delhi for five years. 81 research 
+						  scholars have registered for their Ph.D programme in the research centers of the 
+						  departments.</span></p>
+				</div>
+			</div>
+		</section>
+		<script src="{{url_for('static',filename='js/home.js')}}"></script>
+		<!-- Footer -->
+		<footer class="page-footer font-small unique-color-dark pt-4">
+
+			<!-- Footer Elements -->
+			<div class="container">
+		
+			<!-- Call to action -->
+			<ul class="list-unstyled list-inline text-center py-2">
+				<li class="list-inline-item">
+				<h5 class="mb-1">Register Here</h5>
+				</li>
+				<li class="list-inline-item">
+				<a href="studentHome" class="btn btn-outline-light">Sign up!</a>
+				</li>
+			</ul>
+			<!-- Call to action -->
+		
+			</div>
+			<!-- Footer Elements -->
+		
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">© 2020 Copyright:
+			<a href="#"> Department of Computer Science</a>
+			</div>
+			<!-- Copyright -->
+		
+		</footer>
+    </body>
+</html>
